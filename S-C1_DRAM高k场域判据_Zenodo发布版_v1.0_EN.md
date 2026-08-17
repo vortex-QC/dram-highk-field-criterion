@@ -143,7 +143,7 @@ The industrial practice of DRAM high-k dielectrics maps onto a 2D criterion spac
 ## References
 
 [1] S. Shiratake, "Scaling and Performance Challenges of Future DRAM," 2020 IEEE International Memory Workshop (IMW), pp. 1-3, 2020. DOI: 10.1109/IMW48823.2020.9108122
-[2] S. Jeon, "Perspectives on next-generation DRAM capacitor technology," J. Mater. Res. 35(7):775, 2020. DOI: 10.1557/jmr.2019.335
+[2] W. Jeon, "Recent advances in the understanding of high-k dielectric materials deposited by atomic layer deposition for dynamic random-access memory capacitor applications," J. Mater. Res. 35(7):775, 2019/2020. DOI: 10.1557/jmr.2019.335
 [3] M. H. Park et al., "Emerging Fluorite-Structured Antiferroelectrics and Their Semiconductor Applications," ACS Appl. Electron. Mater. 5:642, 2023. DOI: 10.1021/acsaelm.2c01615; Lomenzo et al., "Discovery of Nanoscale Electric Field-Induced Phase Transitions in ZrO₂," Adv. Funct. Mater. 33(41):2303636, 2023. DOI: 10.1002/adfm.202303636
 [4] S. J. Lee et al., "Effect of La and Si additives in Zr-doped HfO₂ capacitors for pseudo-linear high-κ dielectric applications," Nano Convergence 12:15, 2025. DOI: 10.1186/s40580-025-00477-2
 [5] A. Kandil et al., elastic constants of cubic zirconia, J. Am. Ceram. Soc., 1984 (8YSZ C44=47-66 GPa)
