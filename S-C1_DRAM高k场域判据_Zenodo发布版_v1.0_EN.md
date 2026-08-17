@@ -1,6 +1,6 @@
 # Field-Theoretic Criterion for DRAM High-k Dielectrics: A Two-Dimensional Criterion Space (Soft-Mode × Bandgap) and Quantitative Doping-Pinning
 
-**Zenodo preprint v1.0 (English) | 2026-08-17**
+**Zenodo preprint v2.0 (English) | 2026-08-17**
 **Author**: Chao Qin | ORCID 0009-0006-2000-5644 | Juexiao Information Consulting Center, Xingyi, Guizhou 562400, China
 **Category**: DRAM capacitor dielectrics / materials criterion / elastic soft modes / antiferroelectrics / data-driven materials screening
 **Chinese version**: released simultaneously
@@ -136,9 +136,43 @@ The same t→m martensitic transformation (4% volume expansion + shear) [6]:
 
 **Field-theoretic increment**: this is not a new-material discovery but a criterion coordinate for industrial practice—isomorphic to the photoresist line's "monopoly = tacit tuning knowledge": industry's 60-year doping experience has a sortable coordinate on the C44 spectrum (ionic-radius calibration curve), providing a criterion starting point for next-generation dielectric screening (ferroelectric memory / PCM / 3D NAND charge-trap).
 
-## 5. Conclusion
+## 5. Unified Criterion for Storage Dielectrics (v2.0 extension)
 
-The industrial practice of DRAM high-k dielectrics maps onto a 2D criterion space: soft-mode axis (transition activity) × bandgap axis (leakage wall). Tetragonal ZrO₂ is the unique Pareto-optimal phase (soft mode 20.3/bandgap 4.03); the 30-year industrial pinning of the tetragonal phase receives a criterion explanation; doping-pinning is quantifiable (C44=83.7·r−30.1, R²=0.9998); the martensitic mirror explains the dual industry semantics of the criterion. Criterion-D data engineering makes the criterion semantics explicit as "0K instability signal of a real metastable phase," with the data asset (546-compound list) released alongside.
+The 2D criterion space for DRAM high-k dielectrics (soft-mode × bandgap) is part of a unified criterion for storage media. Extending the framework to ferroelectric memory (S-C2) and phase-change memory (S-C3) yields the **four-dimensional unified storage-medium criterion**:
+
+```
+Unified storage-medium criterion = Transition activity × Transition-activity signature
+                                  × Transition limit × Transition retainability/post-drift
+
+Dim 1 Transition activity (soft-mode C44):       S-C1 — how readily displacive transitions occur
+Dim 2 Transition-activity signature (polar near-degeneracy): S-C2 — the specific FE/AFE channel
+Dim 3 Transition limit (T_m = force-ratio critical): S-C3 — the "strongest event" (melting/boundary dissolution)
+Dim 4 Retainability/post-drift (T_x/ν):          S-C3 — stability and drift of the post-transition state
+```
+
+**Shared "force-ratio critical" language** (the basis of unification across the three storages):
+- **S-C1**: failure line R'=1 (near-degenerate systems = criterion-protocol-sensitive region)
+- **S-C2**: polar channel t↔o near-degeneracy (~1 meV/f.u.) — the ferroelectric phase Pca2₁ itself is not soft (HfO₂ C44=94.0/ZrO₂ 82.8); ferroelectric activity = soft-mode precursor (tetragonal soft, HfO₂ 22.9/ZrO₂ 20.3) + polar-channel near-degeneracy (HfO₂ Pca2₁ ΔE=+0.0177=FE / ZrO₂ t↔o 1 meV=AFE)
+- **S-C3**: T_m = force-ratio critical temperature (Lindemann≡Born equivalence) — the static screening quantity L=Θ_D²·M·V^(2/3) completely orders GST pseudo-line T_m (Spearman ρ=1.000)
+
+**Three storages = different segments of the same transition spectrum**:
+
+| Storage | Transition mode | Criterion coordinate | Application |
+|---|---|---|---|
+| DRAM high-k (AFE charge) | reversible transition in the near-degenerate region | soft mode 20.3 + bandgap 4.03 (ZrO₂) | charge storage |
+| Ferroelectric memory (FE polarization) | polar-phase metastability → polarization switching | soft mode 22.9 + Pca2₁ ΔE (HfO₂) | polarization storage |
+| PCM (amorphous↔crystalline resistance) | melt-quench → resistance-state switching | T_m/T_x/ν (GST pseudo-line) | resistance storage |
+
+**Unified criterion coordinate** (industry material-selection positioning):
+- ZrO₂ (soft mode 20.3 + AFE) → DRAM capacitor (charge)
+- HfO₂/HZO (soft mode 22.9 + FE) → ferroelectric memory (polarization)
+- GST pseudo-line (T_m/T_x/ν) → phase-change memory (resistance)
+
+**Honest boundary**: the unification is conceptual (force-ratio critical language), not formula-level—S-C1/C2 address displacive transitions (soft-mode C44), while S-C3 addresses nucleation-growth type (T_m/T_x/ν), with criterion quantities of different families. The bandgap axis uses DFT relative ordering (OptB88vdW systematically underestimates by ~1-2 eV); absolute thresholds require experimental calibration.
+
+## 6. Conclusion
+
+The industrial practice of DRAM high-k dielectrics maps onto a 2D criterion space: soft-mode axis (transition activity) × bandgap axis (leakage wall). Tetragonal ZrO₂ is the unique Pareto-optimal phase (soft mode 20.3/bandgap 4.03); the 30-year industrial pinning of the tetragonal phase receives a criterion explanation; doping-pinning is quantifiable (C44=83.7·r−30.1, R²=0.9998); the martensitic mirror explains the dual industry semantics of the criterion. Criterion-D data engineering makes the criterion semantics explicit as "0K instability signal of a real metastable phase," with the data asset (546-compound list) released alongside. This 2D criterion space further extends into the four-dimensional unified storage-medium criterion (transition activity × transition-activity signature × transition limit × retainability/post-drift), covering DRAM high-k, ferroelectric memory, and phase-change memory—moving storage-dielectric selection from trial-and-error to criterion-space positioning.
 
 ## References
 
