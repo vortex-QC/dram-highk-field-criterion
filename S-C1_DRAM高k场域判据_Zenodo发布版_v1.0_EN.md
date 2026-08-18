@@ -1,8 +1,8 @@
 # Field-Theoretic Criterion for DRAM High-k Dielectrics: A Two-Dimensional Criterion Space (Soft-Mode × Bandgap) and Quantitative Doping-Pinning
 
-**Zenodo preprint v2.0 (English) | 2026-08-17**
+**Zenodo preprint v2.1 (English) | 2026-08-18**
 **Author**: Chao Qin | ORCID 0009-0006-2000-5644 | Juexiao Information Consulting Center, Xingyi, Guizhou 562400, China
-**Category**: DRAM capacitor dielectrics / materials criterion / elastic soft modes / antiferroelectrics / data-driven materials screening
+**Category**: DRAM capacitor dielectrics / materials criterion / elastic soft modes / antiferroelectrics / data-driven materials screening / unified storage-medium criterion
 **Chinese version**: released simultaneously
 
 ---
@@ -138,41 +138,56 @@ The same t→m martensitic transformation (4% volume expansion + shear) [6]:
 
 ## 5. Unified Criterion for Storage Dielectrics (v2.0 extension)
 
-The 2D criterion space for DRAM high-k dielectrics (soft-mode × bandgap) is part of a unified criterion for storage media. Extending the framework to ferroelectric memory (S-C2) and phase-change memory (S-C3) yields the **four-dimensional unified storage-medium criterion**:
+The 2D criterion space for DRAM high-k dielectrics (soft-mode × bandgap) is part of a unified criterion for storage media. Extending the framework to ferroelectric memory (S-C2), phase-change memory (S-C3), and charge-trap memory (S-C4) yields the **five-dimensional unified storage-medium criterion**:
 
 ```
 Unified storage-medium criterion = Transition activity × Transition-activity signature
                                   × Transition limit × Transition retainability/post-drift
+                                  × Retention quality
 
 Dim 1 Transition activity (soft-mode C44):       S-C1 — how readily displacive transitions occur
 Dim 2 Transition-activity signature (polar near-degeneracy): S-C2 — the specific FE/AFE channel
 Dim 3 Transition limit (T_m = force-ratio critical): S-C3 — the "strongest event" (melting/boundary dissolution)
 Dim 4 Retainability/post-drift (T_x/ν):          S-C3 — stability and drift of the post-transition state
+Dim 5 Retention quality (A=1/τ):                 S-C4 — adsorption strength (reciprocal dwell time)
 ```
 
-**Shared "force-ratio critical" language** (the basis of unification across the three storages):
+**Shared "force-ratio critical / retention" language** (the basis of unification across the four storages):
 - **S-C1**: failure line R'=1 (near-degenerate systems = criterion-protocol-sensitive region)
 - **S-C2**: polar channel t↔o near-degeneracy (~1 meV/f.u.) — the ferroelectric phase Pca2₁ itself is not soft (HfO₂ C44=94.0/ZrO₂ 82.8); ferroelectric activity = soft-mode precursor (tetragonal soft, HfO₂ 22.9/ZrO₂ 20.3) + polar-channel near-degeneracy (HfO₂ Pca2₁ ΔE=+0.0177=FE / ZrO₂ t↔o 1 meV=AFE)
 - **S-C3**: T_m = force-ratio critical temperature (Lindemann≡Born equivalence) — the static screening quantity L=Θ_D²·M·V^(2/3) completely orders GST pseudo-line T_m (Spearman ρ=1.000)
+- **S-C4**: adsorption strength A=1/τ (reciprocal dwell time) — the CTF retention model (Arrhenius with an activation energy embedded in τ) is itself an engineering realization of A=1/τ; experiments confirm A=1/τ is a distribution (widely distributed time constants)
 
-**Three storages = different segments of the same transition spectrum**:
+**★ Retention spectrum (v2.1 core extension)**: the unified criterion extends from a "transition spectrum" to a "retention spectrum"—phase-change memory and charge-trap memory share the same adsorption-strength coordinate A=1/τ:
 
-| Storage | Transition mode | Criterion coordinate | Application |
+```
+Decay-shape dichotomy (v0.4 §4):
+  Exponential end (CTF, stretched exponential): ΔVth ~ exp[-(t/τ)^β] — charge escape, Arrhenius activation
+  Power-law end (PCM):                          ΔR ~ (t/t₀)^ν, ν≈0.05-0.12 — structural relaxation, FDNE slow decay
+→ The two media are discriminable by the time-dependence exponent (exponential: semi-log linear
+  vs power-law: log-log linear) — two realizations of the same A=1/τ coordinate, two ends of retention quality
+```
+
+**Four storages = different segments of the same retention spectrum**:
+
+| Storage | Retention mode | Criterion coordinate | Application |
 |---|---|---|---|
 | DRAM high-k (AFE charge) | reversible transition in the near-degenerate region | soft mode 20.3 + bandgap 4.03 (ZrO₂) | charge storage |
 | Ferroelectric memory (FE polarization) | polar-phase metastability → polarization switching | soft mode 22.9 + Pca2₁ ΔE (HfO₂) | polarization storage |
-| PCM (amorphous↔crystalline resistance) | melt-quench → resistance-state switching | T_m/T_x/ν (GST pseudo-line) | resistance storage |
+| PCM (amorphous↔crystalline resistance) | melt-quench → resistance-state switching | T_m/T_x/ν (GST pseudo-line) | resistance storage (power-law end) |
+| 3D NAND CTF (charge trap) | charge dwell in trap layer → escape | E_A/τ/A=1/τ (trap energy spectrum) | charge retention (exponential end) |
 
 **Unified criterion coordinate** (industry material-selection positioning):
 - ZrO₂ (soft mode 20.3 + AFE) → DRAM capacitor (charge)
 - HfO₂/HZO (soft mode 22.9 + FE) → ferroelectric memory (polarization)
-- GST pseudo-line (T_m/T_x/ν) → phase-change memory (resistance)
+- GST pseudo-line (T_m/T_x/ν) → phase-change memory (resistance, power-law end)
+- SiN/high-k trap layers (E_A spectrum + A=1/τ) → 3D NAND CTF (charge retention, exponential end)
 
-**Honest boundary**: the unification is conceptual (force-ratio critical language), not formula-level—S-C1/C2 address displacive transitions (soft-mode C44), while S-C3 addresses nucleation-growth type (T_m/T_x/ν), with criterion quantities of different families. The bandgap axis uses DFT relative ordering (OptB88vdW systematically underestimates by ~1-2 eV); absolute thresholds require experimental calibration.
+**Honest boundary**: the unification is conceptual (force-ratio critical / retention language), not formula-level—S-C1/C2 address displacive transitions (soft-mode C44), S-C3 addresses nucleation-growth type (T_m/T_x/ν), S-C4 addresses charge retention (E_A/A=1/τ), with criterion quantities of different families. The bandgap axis uses DFT relative ordering (OptB88vdW systematically underestimates by ~1-2 eV); absolute thresholds require experimental calibration. The retention spectrum is a conceptual extension—phase change vs charge retention are two realizations of the same A=1/τ coordinate, not the same formula.
 
 ## 6. Conclusion
 
-The industrial practice of DRAM high-k dielectrics maps onto a 2D criterion space: soft-mode axis (transition activity) × bandgap axis (leakage wall). Tetragonal ZrO₂ is the unique Pareto-optimal phase (soft mode 20.3/bandgap 4.03); the 30-year industrial pinning of the tetragonal phase receives a criterion explanation; doping-pinning is quantifiable (C44=83.7·r−30.1, R²=0.9998); the martensitic mirror explains the dual industry semantics of the criterion. Criterion-D data engineering makes the criterion semantics explicit as "0K instability signal of a real metastable phase," with the data asset (546-compound list) released alongside. This 2D criterion space further extends into the four-dimensional unified storage-medium criterion (transition activity × transition-activity signature × transition limit × retainability/post-drift), covering DRAM high-k, ferroelectric memory, and phase-change memory—moving storage-dielectric selection from trial-and-error to criterion-space positioning.
+The industrial practice of DRAM high-k dielectrics maps onto a 2D criterion space: soft-mode axis (transition activity) × bandgap axis (leakage wall). Tetragonal ZrO₂ is the unique Pareto-optimal phase (soft mode 20.3/bandgap 4.03); the 30-year industrial pinning of the tetragonal phase receives a criterion explanation; doping-pinning is quantifiable (C44=83.7·r−30.1, R²=0.9998); the martensitic mirror explains the dual industry semantics of the criterion. Criterion-D data engineering makes the criterion semantics explicit as "0K instability signal of a real metastable phase," with the data asset (546-compound list) released alongside. This 2D criterion space further extends into the five-dimensional unified storage-medium criterion (transition activity × transition-activity signature × transition limit × retainability/post-drift × retention quality), covering DRAM high-k, ferroelectric memory, phase-change memory, and charge-trap memory. The retention of charge-trap memory (3D NAND CTF) is experimentally confirmed to be a distribution of adsorption strength A=1/τ (widely distributed time constants), forming the exponential end of a decay-shape dichotomy whose power-law end is the drift of phase-change memory—moving storage-dielectric selection from trial-and-error to criterion-space positioning, with the unified criterion extending from a transition spectrum to a retention spectrum.
 
 ## References
 
@@ -183,6 +198,10 @@ The industrial practice of DRAM high-k dielectrics maps onto a 2D criterion spac
 [5] A. Kandil et al., elastic constants of cubic zirconia, J. Am. Ceram. Soc., 1984 (8YSZ C44=47-66 GPa)
 [6] R. H. J. Hannink, P. M. Kelly, B. C. Muddle, "Transformation Toughening in Zirconia-Containing Ceramics," J. Am. Ceram. Soc. 83(3):461-487, 2000. DOI: 10.1111/j.1151-2916.2000.tb01221.x
 [7] R. Barshilia, B. Deepthi, K. S. Rajam, "Stabilization of tetragonal and cubic phases of ZrO₂ in pulsed sputter deposited ZrO₂/Al₂O₃ and ZrO₂/Y₂O₃ nanolayered thin films," J. Appl. Phys. 104:113532, 2008. DOI: 10.1063/1.3040720; R. C. Garvie, "The Occurrence of Metastable Tetragonal Zirconia as a Crystallite Size Effect," J. Phys. Chem. 69(4):1238-1243, 1965. DOI: 10.1021/j100888a024; H.-T. Chen et al., "TEM Observation and Study of Three-Layer Al₂O₃/ZrO₂ Ceramics," J. Nanosci. Nanotechnol. 10:2088, 2010. DOI: 10.1166/jnn.2010.2074
+[8] Nitride trap energy levels for charge retention in 3D NAND (SiN trap level E_C−E_T≈1.0 eV), IEEE Symposium on VLSI Technology 2015. DOI: 10.1109/VLSIT.2015.7223670
+[9] M. Wimmer, M. Kaes, C. Dellen, M. Salinga, "Role of activation energy in resistance drift of amorphous phase change materials," Front. Phys. 2:75, 2014. DOI: 10.3389/fphy.2014.00075
+[10] Modeling of vertical charge loss in 3D NAND as a widely distributed time-constant process, IEEE Electron Device Letters, 2024. DOI: 10.1109/led.2024.3435345
+[11] Reliability and retention modeling of 3D QLC NAND, IEEE Trans. Comput.-Aided Des. Integr. Circuits Syst., 2025. DOI: 10.1109/tcad.2025.3526055
 
 ---
 *Field-criterion paper v1.0 EN. Author: Chao Qin (Vortex) ORCID 0009-0006-2000-5644. Data assets: SPTF联合排序_v1.0_D口径_v0.2.json (546 compounds) + SPTF剪切软模候选_56_v0.3.json (54 entries). Reproducibility scripts released with the GitHub package.*

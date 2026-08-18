@@ -2,7 +2,7 @@
 
 Field-theoretic criterion for DRAM high-k dielectrics: a two-dimensional criterion space (soft-mode × bandgap) and quantitative doping-pinning.
 
-Preprint v1.1: CN DOI 10.5281/zenodo.21972970 (concept 10.5281/zenodo.21972969) | EN DOI 10.5281/zenodo.21972973 (concept 10.5281/zenodo.21972972)
+Preprint v2.1: CN DOI 10.5281/zenodo.21990524 (concept 10.5281/zenodo.21972969) | EN DOI 10.5281/zenodo.21990528 (concept 10.5281/zenodo.21972972)
 
 ## Contents
 
@@ -11,7 +11,8 @@ Preprint v1.1: CN DOI 10.5281/zenodo.21972970 (concept 10.5281/zenodo.21972969) 
 - `scripts/S-C1发布阻断_异常剔除与重排序_v0.1.py` — anomaly triage (5 bad-value removal + 5 audit-candidate flags) and re-ranking
 - `data/SPTF联合排序_v1.0_D口径_v0.2.json` — criterion-D joint ranking, 546 compounds (c44_old/c44_d/d_jid/d_spg/flag)
 - `data/SPTF剪切软模候选_56_v0.3.json` — 54 soft-mode resonance candidates, ds_max descending
-- `S-C1_DRAM高k场域判据_Zenodo发布版_v1.0_CN.md` / `_EN.md` — preprint sources (v1.1)
+- `S-C1_DRAM高k场域判据_Zenodo发布版_v1.0_CN.md` / `_EN.md` — preprint sources (v2.1: five-dimensional unified storage-medium criterion, retention-spectrum extension)
+- `pdf/` — v2.1 preprint PDFs (CN 6 pp / EN 7 pp)
 
 ## Requirements
 
